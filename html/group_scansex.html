@@ -1,0 +1,47 @@
+
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>SCAN COMMENT SPAM, SEX trong Nhóm</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<input class="form-control" id="input_gr_scansex_token" placeholder="Dán Access Token vào đây ..." /><br>
+
+		<b>* Ký tự tìm kiếm (RegExp):</b><br>
+		<input class="form-control" id="input_gr_scansex_regex" value="/" /><br>
+
+		<b>* Thời gian giữa mỗi lần SCAN (giây):</b><br>
+		<input type="number" class="form-control" id="input_gr_scansex_delay" value="10" /><br>
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-danger disabled" id="submit_gr_scansex_stop">
+				DỪNG LẠI
+			</a>
+			<a class="btn btn-success" id="submit_gr_scansex_start">
+				Bắt đầu SCAN
+				<i class="fa fa-exchange"></i>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_gr_scansex_hide" style="display:none;">
+	<div class="ibox-title">
+		<h5>Danh sách nhóm đang quản trị</h5>
+	</div>
+	<div class="ibox-content">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th width="5%">STT</th>
+					<th>ID Nhóm</th>
+					<th>Tên Nhóm</th>
+					<th>Thành Viên</th>
+					<th>Đã Xóa</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody id="html_gr_scansex_table"></tbody>
+		</table>
+	</div>
+</div>

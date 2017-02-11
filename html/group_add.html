@@ -1,0 +1,97 @@
+
+<div class="page_tools row">
+	<div class="col-md-9">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+				<h5>AUTO Add Mem Groups bằng Token</h5>
+			</div>
+			<div class="ibox-content">
+				<div style="margin-bottom: 5px;">
+					<b>* Token ADMIN Nhóm:</b>
+				</div>
+				<input class="form-control" id="input_addMem_tokenAdmin" type="text" value=""><br />
+				<div style="margin-bottom: 5px;">
+					<b>* ID Nhóm muốn Add MEM:</b>
+				</div>
+				<input class="form-control" id="input_addMem_idGr" type="text" value=""><br />
+				<div style="margin-bottom: 5px;">
+					<b>* List Access Token:</b>
+				</div>
+				<textarea class="form-control" id="input_addMem_listToken" rows="9"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+				<h5>Cài đặt</h5>
+			</div>
+			<div class="ibox-content">
+				<div style="margin-bottom: 5px;">
+					<b>* Delay giữa 2 request (miliseconds):</b>
+				</div>
+				<input class="form-control" id="input_addMem_delay" type="text" value="15"><br />
+				<div style="margin-bottom: 5px;">
+					<b>* Delay giữa 2 token (seconds):</b>
+				</div>
+				<input class="form-control" id="input_addMem_nextToken" type="text" value="60"><br />
+				<div style="margin-bottom: 5px;">
+					<b>* LIMIT Members (điền 0 nếu muốn full):</b>
+				</div>
+				<input class="form-control" id="input_addMem_limit" type="text" value="900"><br />
+				<div style="margin-bottom: 5px;">
+					<b>* Giới tính:</b>
+				</div>
+				<select class="form-control" id="input_addMem_sex">
+					<option value="all">Cả Nam và Nữ</option>
+					<option value="male">Chỉ giới tính Nam</option>
+					<option value="female">Chỉ giới tính Nữ</option>
+				</select>
+				<div class="hr-line-dashed" style="margin: 17px 0;"></div>
+				<div class="row">
+						<div class="col-md-6">
+							<button type="button" class="btn btn-success btn-block btn-lg" id="submit_addMem">BẮT ĐẦU</button>
+						</div>
+						<div class="col-md-6">
+							<button type="button" class="btn btn-danger btn-block btn-lg disabled" id="submit_addMem_stop">DỪNG LẠI</button>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-12" id="html_addMem_result" style="display:none;">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+				<h5>Kết quả</h5>
+			</div>
+			<div class="ibox-content">
+				<div class="feed-activity-list">
+					<div class="feed-element" style="border:none">
+						<a target="_blank" class="pull-left addMem_link">
+							<img id="addMem_images">
+						</a>
+						<div class="media-body" style="font-size:14px;line-height:2">
+							<b><a class="addMem_link" id="addMem_name" target="_blank"></a></b><br>
+							<small><span id="addMem_members">0</span> thành viên</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ibox-content">
+				<ul class="list-group">
+					<li class="list-group-item">Tổng số Access Token đã nhập: <b id="addMem_total_token">0</b></li>
+					<li class="list-group-item">Tổng số Access Token còn Live và có quyền add mem: <font color="blue"><b id="addMem_total_token_live">0</b></font></li>
+					<li class="list-group-item">Tổng số bạn bè có thể thêm: <b id="addMem_add_total">0</b></li>
+					<li class="list-group-item">Thêm vào nhóm thành công: <font color="green"><i class="fa fa-check"></i> <b id="addMem_add_success">0</b></font></li>
+					<li class="list-group-item">Thêm vào nhóm thất bại: <font color="red"><i class="fa fa-times"></i> <b id="addMem_add_error">0</b></font></li>
+					<li class="list-group-item">Trạng thái: <span id="addMem_progress_text">Đang chờ !</span></li>
+					<li class="list-group-item" id="addMem_progress_html">
+						<div class="progress progress-striped">
+							<div id="addMem_progress" style="width: 0%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" class="progress-bar progress-bar-primary"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

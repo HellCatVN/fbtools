@@ -1,0 +1,117 @@
+<div class="page_tools ibox float-e-margins" id="html_check_AccessToken">
+	<div class="ibox-title">
+		<h5>Check Access Token Live</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* List Access Token:</b><br>
+		<textarea class="form-control" id="input_check_AccessToken" rows="8" placeholder="Mỗi Access Token cách nhau bởi dấu xuống dòng ..."></textarea><br>
+		<b>* Khoảng cách giữa 2 lần gửi (miliseconds):</b><br>
+		<input type="text" class="form-control" id="input_check_AccessToken_delay" value="10">
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<select class="form-control" id="input_check_AccessToken_show" style="width: 20%;display:inline-block;margin-right:8px;">
+				<option value="hide">Không hiện thông tin Access Token</option>
+				<option value="show">Hiện thông tin Access Token</option>
+			</select>
+			<a class="btn btn-danger" id="submit_check_AccessToken">
+				Check Access Token <i class="fa fa-arrow-right"></i>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_check_AccessToken_result" style="display:none;">
+	<div class="ibox-title">
+		<h5>List Acces Token Checked</h5>
+	</div>
+	<div class="ibox-content">
+		* <font color="green"><b>Access Token LIVE:</b></font>
+		<textarea class="form-control" id="input_check_AccessToken_result" rows="8"></textarea>
+		<div class="hr-line-dashed"></div>
+		* <font color="red"><b>Access Token DIE:</b></font>
+		<textarea class="form-control" id="input_check_AccessToken_result_die" rows="8"></textarea>
+		<div class="hr-line-dashed"></div>
+		<div class="row">
+			<div class="col-md-5">
+				<select class="form-control" id="input_check_AccessToken_filter">
+					<option value="none">Không Lọc</option>
+					<option value="location">Lọc theo Location</option>
+					<option value="language">Lọc theo Ngôn Ngữ</option>
+					<option value="friends">Lọc theo Bạn bè</option>
+					<option value="groups">Lọc theo Nhóm</option>
+					<option value="pages">Lọc theo Trang</option>
+				</select>
+			</div>
+			<div class="col-md-5">
+				<div class="row">
+					<div class="col-md-12" id="html_check_AccessToken_filter_location" style="display:none;">
+						<input type="text" class="form-control" id="input_check_AccessToken_filter_location" placeholder="Nhập từ khóa ...">
+					</div>
+					<div class="col-md-12" id="html_check_AccessToken_filter_language" style="display:none;">
+						<input type="text" class="form-control" id="input_check_AccessToken_filter_language" placeholder="Nhập từ khóa ...">
+					</div>
+					<div id="html_check_AccessToken_filter_friends" style="display:none;">
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="input_check_AccessToken_filter_friends_from" placeholder="Từ ...">
+						</div>
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="input_check_AccessToken_filter_friends_to" placeholder="Đến ...">
+						</div>
+					</div>
+					<div id="html_check_AccessToken_filter_groups" style="display:none;">
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="input_check_AccessToken_filter_groups_from" placeholder="Từ ...">
+						</div>
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="input_check_AccessToken_filter_groups_to" placeholder="Đến ...">
+						</div>
+					</div>
+					<div id="html_check_AccessToken_filter_pages" style="display:none;">
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="input_check_AccessToken_filter_pages_from" placeholder="Từ ...">
+						</div>
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="input_check_AccessToken_filter_pages_to" placeholder="Đến ...">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<button class="btn btn-success" id="submit_check_AccessToken_filter">
+					Lọc Access Token <i class="fa fa-filter"></i>
+				</button>
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<button class="btn btn-success">
+					Đã Nhập <span class="badge" id="html_check_AccessToken_danhap">0</span>
+			</button>
+			<button class="btn btn-primary">
+					Access Token Live <span class="badge" id="html_check_AccessToken_live">0</span>
+			</button>
+			<button class="btn btn-danger">
+					Access Token DIE <span class="badge" id="html_check_AccessToken_die">0</span>
+			</button>
+			<button class="btn btn-warning" id="html_check_AccessToken_download">
+					Download As Zip <i class="fa fa-download"></i>
+			</button>
+		</div>
+	</div>
+	<div class="ibox-content">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th width="5%">STT</th>
+					<th width="15%">Access Token</th>
+					<th>Full Name</th>
+					<th>Location</th>
+					<th>Ngôn Ngữ</th>
+					<th>Bạn bè</th>
+					<th>Nhóm</th>
+					<th>Trang</th>
+				</tr>
+			</thead>
+			<tbody id="html_check_AccessToken_body"></tbody>
+		</table>
+	</div>
+</div>

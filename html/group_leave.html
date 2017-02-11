@@ -1,0 +1,52 @@
+
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>Thoát khỏi nhóm hàng loạt trên Facebook</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<input class="form-control" id="input_group_leave_token" placeholder="Dán Access Token vào đây ..." /><br>
+
+		<b>* Lọc danh sách:</b><br>
+		<select class="form-control" id="input_group_leave_type">
+			<option value="all">Những nhóm đang làm admin + tham gia</option>
+			<option value="member">Những nhóm đang tham gia</option>
+		</select><br>
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-danger" id="submit_group_leave_load">
+				Lấy danh sách nhóm
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_group_leave_result" style="display:none">
+	<div class="ibox-title">
+		<h5>Danh sách nhóm đang tham gia</h5>
+	</div>
+	<div class="ibox-content">
+		<div id="dataTables">
+			<table class="table table-bordered table-hover editable">
+				<thead>
+					<tr align="center" style="font-weight: bold;">
+						<td>STT</td>
+						<td><input type="checkbox" id="checkall_group_leave" class="css-checkbox" /><label for="checkall_group_leave" class="css-label"></label></td>
+						<td>ICon</td>
+						<td>GID</td>
+						<td>Tên Nhóm</td>
+						<td>Thành viên</td>
+						<td>Trạng Thái</td>
+					</tr>
+				</thead>
+				<tbody id="html_group_leave_table"></tbody>
+			</table>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-danger" id="submit_group_leave_select">
+				<i class="fa fa-trash"></i> Thoát khỏi nhóm đã chọn
+			</a>
+		</div>
+	</div>
+</div>

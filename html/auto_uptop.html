@@ -1,0 +1,36 @@
+
+<div class="page_tools ibox float-e-margins" id="html_auto_uptop">
+	<div class="ibox-title">
+		<h5>AUTO Uptop bài viết Facebook</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<input class="form-control" id="input_auto_uptop_token" placeholder="Nhập Access Token có quyền bình luận bài viết ..." /><br>
+
+		<b>* ID Bài viết:</b><br>
+		<input class="form-control" id="input_auto_uptop_id" placeholder="Dán ID Bài  viết vào đây ..." /><br>
+
+		<b>* Tin nhắn:</b> (hỗ trợ Spin Content {1|2|3})<br>
+		<textarea class="form-control" id="input_auto_uptop_msg" placeholder="Nội dung comment ?" rows="6"></textarea><br>
+
+		<b>* Khoảng cách giữa 2 lần gửi (giây):</b><br>
+		<input class="form-control" id="input_auto_uptop_delay" value="300" /><br>
+
+		<b>* Lưu ý:</b><br>
+		$thoigian - Thời gian khi COMMENT<br>
+		Không tắt tab khi đang chạy comment !<br>
+
+		<div class="hr-line-dashed"></div>
+		Trạng thái: <span id="auto_uptop_status">Đang chờ !</span>
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-success disabled" id="submit_auto_uptop_stop" disabled="">
+				DỪNG LẠI
+			</a>
+			<a class="btn btn-danger" id="submit_auto_uptop_start">
+				Bắt đầu
+			</a>
+		</div>
+	</div>
+</div>

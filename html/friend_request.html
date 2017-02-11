@@ -1,0 +1,54 @@
+
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>Lời mời kết bạn trên Facebook</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<input class="form-control" id="input_friend_request_token" placeholder="Dán Access Token vào đây ..." /><br>
+
+		<b>* Giới tính:</b><br>
+		<select class="form-control" id="input_friend_request_sex">
+			<option value="all">Cả Nam và Nữ</option>
+			<option value="male">Chỉ Nam</option>
+			<option value="female">Chỉ Nữ</option>
+		</select><br>
+
+		<b>* Bạn chung trở lên:</b> (Ví dụ điền <b>5</b> thì có <b>5 bạn trung trở lên</b> sẽ được chấp nhận)<br>
+		<input class="form-control" id="input_friend_request_mutual" value="0" /><br>
+
+		<div class="hr-line-dashed"></div>
+		Trạng thái: <span id="friend_request_status">Đang chờ !</span>
+
+		<div class="friend_request_progress" style="display:none;">
+			<div class="hr-line-dashed"></div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-6">
+						<center>
+							<font color="green" size="50"><i class="fa fa-check"></i> <b id="friend_request_success">0</b></font>
+						</center>
+					</div>
+					<div class="col-md-6">
+						<center>
+							<font color="red" size="50"><i class="fa fa-times"></i> <b id="friend_request_error">0</b></font>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-danger disabled" id="submit_friend_request_stop">
+				DỪNG LẠI
+			</a>
+			<a class="btn btn-success" id="submit_friend_request_accept">
+				Chấp nhận lời mời kết bạn
+			</a>
+			<a class="btn btn-default" id="submit_friend_request_delete">
+				Xóa yêu cầu kết bạn
+			</a>
+		</div>
+	</div>
+</div>

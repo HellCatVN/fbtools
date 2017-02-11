@@ -1,0 +1,38 @@
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>Đăng nhập để lấy Access Token</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Email hoặc điện thoại:</b>
+		<input type="text" id="token_get_user" class="form-control" placeholder=""><br>
+
+		<b>* Mật khẩu:</b>
+		<input type="text" id="token_get_pass" class="form-control" placeholder=""><br>
+
+		<b>* Chọn Ứng Dụng:</b>
+		<select class="form-control" id="token_get_type">
+			<option value="iphone">Facebook for iPhone</option>
+			<option value="android">Facebook for Android</option>
+			<option value="htcsense">HTC Sense</option>
+		</select>
+
+		<div class="hr-line-dashed"></div>
+		* Nếu có mã bảo mật, vui lòng nhập mã bảo mật để lấy được Access Token ! <br>
+		* Access Token bạn GET được ở đây có đầy đủ quyền để sử dụng các chức năng trên hệ thống !
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-danger" id="submit_token_get_start">
+				GET Access Token
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_token_get_hide" style="display:none;">
+	<div class="ibox-title">
+		<h5>Access Token đã GET được</h5>
+	</div>
+	<div class="ibox-content" id="dataTables">
+		<textarea id="token_get_accesstoken" class="form-control" rows="5"></textarea>
+	</div>
+</div>

@@ -1,0 +1,83 @@
+
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>AUTO Share bài viết</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Lựa chọn ứng dụng bạn đã từng dùng:</b><br>
+		<center>
+			<button class="btn btn-button btn-danger" id="ClickGET_PagesManageriOs">Pages Manager for iOS</button>
+		</center>
+
+		<b>* ID Bài Cần Share:</b><br>
+		<input class="form-control" placeholder="Điền ID bài viết ..." id="input_auto_share_id" /><br>
+		
+		<b>* Access Token:</b><br>
+		<textarea class="form-control" id="input_auto_share_token" placeholder="Nhập Access Token có quyền share, mỗi Access Token cách nhau bởi dấu xuống dòng ..." rows="6"></textarea><br>
+
+		<b>* Bạn đang nghĩ gì?:</b> (hỗ trợ Spin Content {1|2|3})<br>
+		<textarea class="form-control" id="input_auto_share_msg" placeholder="Bạn đang nghĩ gì ?" rows="5"></textarea><br>
+		
+		<b>* Khoảng cách giữa 2 Access Token (giây):</b><br>
+		<input class="form-control" value="5" id="input_auto_share_delay_token" /><br>
+
+		<b>* Khoảng cách giữa 2 lần gửi yêu cầu (miliseconds):</b><br>
+		<input class="form-control" value="15" id="input_auto_share_delay" /><br>
+
+		<b>* LIMIT (Friends / Groups):</b><br>
+		<input class="form-control" value="5000" id="input_auto_share_limit"/><br>
+
+		<b>* Chế độ:</b><br>
+		<select class="form-control" id="input_auto_share_type">
+			<option value="all" selected="">Share lên Nhóm + Tường bạn bè + Trang cá nhân</option>
+			<option value="groups">Chỉ Share lên Nhóm</option>
+			<option value="friends">Chỉ Share lên Tường bạn bè</option>
+			<option value="onlyme">Chỉ Share lên Trang cá nhân</option>
+		</select><br/>
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-success disabled" disabled="" id="click_auto_share_stop">
+				DỪNG LẠI
+			</a>
+			<a class="btn btn-danger" id="click_auto_share_start">
+				Bắt đầu
+			</a>
+		</div>
+	</div>
+</div>
+<div id="html_auto_share_result" style="display:none;">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<b><font size="5">Logs Chi Tiết</font></b>
+			<div class="pull-right">
+				<a class="btn btn-danger" id="click_auto_share_clear">
+					Xóa Logs
+				</a>
+			</div>
+			<div class="hr-line-dashed"></div>
+			<div style="height: 500px;max-height: 100%;overflow-y:auto;" id="html_auto_share_logs"></div>
+		</div>
+	</div>
+	<div class="page_tools ibox float-e-margins">
+		<div class="ibox-title">
+			<h5>Kết Quả</h5>
+		</div>
+		<div class="ibox-content">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr align="center">
+						<th style="text-align:center" width="5%">STT</th>
+						<th style="text-align:center" width="30%">Access Token</th>
+						<th style="text-align:center" width="20%">Tên</th>
+						<th style="text-align:center" width="11%">LIMIT</th>
+						<th style="text-align:center" width="12%">Có thể POST</th>
+						<th style="text-align:center" width="11%">Thành công</th>
+						<th style="text-align:center" width="11%">Thất bại</th>
+					</tr>
+				</thead>
+				<tbody id="html_auto_share_table"></tbody>
+			</table>
+		</div>
+	</div>
+</div>

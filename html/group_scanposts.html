@@ -1,0 +1,48 @@
+
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>SCAN Bài viết hàng loạt</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<input class="form-control" id="input_scan_post_token" placeholder="Dán Access Token vào đây ..." /><br>
+
+		<b>* Ký tự tìm kiếm (bỏ trống sẽ xóa hết bài viết):</b><br>
+		<input class="form-control" id="input_scan_post_regex" value="/" /><br>
+
+		<b>* ID Muốn Quét:</b> (ID Profile, nhóm hoặc trang đang quản trị)<br>
+		<input type="number" class="form-control" id="input_scan_post_id" placeholder="Nhập ID muốn SCAN vào đây ..." /><br>
+
+		<div class="hr-line-dashed"></div>
+		Trạng thái: <span id="scan_post_status">Đang chờ !</span>
+
+		<div class="scan_post_progress" style="display:none;">
+			<div class="hr-line-dashed"></div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-6">
+						<center>
+							<font color="green" size="50"><i class="fa fa-check"></i> <b id="scan_post_success">0</b></font>
+						</center>
+					</div>
+					<div class="col-md-6">
+						<center>
+							<font color="red" size="50"><i class="fa fa-times"></i> <b id="scan_post_error">0</b></font>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-danger disabled" id="submit_scan_post_stop">
+				DỪNG LẠI
+			</a>
+			<a class="btn btn-success" id="submit_scan_post_start">
+				Quét bài viết
+				<i class="fa fa-exchange"></i>
+			</a>
+		</div>
+	</div>
+</div>

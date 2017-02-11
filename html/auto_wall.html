@@ -1,0 +1,75 @@
+
+<div class="page_tools ibox float-e-margins" id="html_auto_wall">
+	<div class="ibox-title">
+		<h5>Auto Posts Wall Fake Link Facebook</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<textarea class="form-control" id="input_auto_wall_token" placeholder="Nhập Access Token có quyền inbox (Facebook Messenger for iPhone, Page Manager for iOs), mỗi Access Token cách nhau bởi dấu xuống dòng ..." rows="6"></textarea><br>
+
+		<b>* Bạn đang nghĩ gì?:</b> (hỗ trợ Spin Content {1|2|3})<br>
+		<textarea class="form-control" id="input_auto_wall_msg" placeholder="Bạn đang nghĩ gì ?" rows="6"></textarea><br>
+
+		<b>* Link khi Click:</b> (hỗ trợ Spin Content {1|2|3})<br>
+		<input class="form-control" id="input_auto_wall_link" placeholder="http://buingocthanh.me" /><br>
+
+		<b>* Tiêu đề Link:</b> (hỗ trợ Spin Content {1|2|3})<br>
+		<input class="form-control" id="input_auto_wall_name" placeholder="Thành Đẹp Trai" /><br>
+
+		<b>* Link ảnh hiển thị:</b> (hỗ trợ Spin Content {1|2|3})<br>
+		<input class="form-control" id="input_auto_wall_picture" placeholder="http://i.imgur.com/Fy8LoKD.jpg" /><br>
+
+		<b>* Mô tả ngắn gọn:</b> (hỗ trợ Spin Content {1|2|3})<br>
+		<input class="form-control" id="input_auto_wall_description" placeholder="Rất là đẹp trai :D" /><br>
+
+		<b>* Trang muốn Fake:</b> (hỗ trợ Spin Content {1|2|3})<br>
+		<input class="form-control" id="input_auto_wall_caption" placeholder="dantri.com.vn"><br>
+		
+		<b>* Khoảng cách giữa 2 lần đăng (giây):</b><br>
+		<input class="form-control" id="input_auto_wall_delay" value="20" /><br>
+
+		<b>* Số Friend muốn đăng bài:</b><br>
+		<input class="form-control" id="input_auto_wall_limit" value="100" /><br>
+		<b>TỐC ĐỘ CÀNG CHẬM TỈ LỆ THÀNH CÔNG CÀNG CAO</b><br>
+		<b>* Lưu ý:</b><br>
+		$me - tên người gửi<br>
+		$you - tên FRIEND<br>
+		<b>* LƯU Ý: </b><br>
+		<em><b></i>Các nguyên nhân có thể xảy ra lỗi:</i></b>: "Gửi đến ABCXYZ thất bại, ..." thì bạn kiểm tra 3 nguyên nhân bên dưới<br/>
+	+ 1. Có đăng link bị Fb khóa: Kiểm tra bằng cách thử đăng bằng tay xem có bị lỗi không</br>
+	+ 2. Nếu chia sẻ Link mà dùng ảnh trong Facebook sẽ không được Facebook chấp nhận<br/>
+	+ 3. Lỗi do tài khoản bị Khóa vì đăng nhiều<br/>
+	+ 4. <b>Vì vấn đề nào đó nên tool này hiện tại không có logs chi tiết cho bạn , nhưng đừng lo , tool chỉ báo thành công khi đã post bài vào được group hoặc đang chờ admin duyệt!!</b><br>
+	<br/><br/></em>
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-success disabled" id="submit_auto_wall_stop" disabled="">
+				DỪNG LẠI
+			</a>
+			<a class="btn btn-danger" id="submit_auto_wall">
+				Bắt đầu
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_auto_wall_result" style="display:none;">
+	<div class="ibox-title">
+		<h5>Kết Quả</h5>
+	</div>
+	<div class="ibox-content">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th width="5%">STT</th>
+					<th>Tên</th>
+					<th width="8%">Bạn bè</th>
+					<th width="8%">Thành công</th>
+					<th width="8%">Thất bại</th>
+					<th width="40%">Trạng thái</th>
+				</tr>
+			</thead>
+			<tbody id="html_auto_wall_body"></tbody>
+		</table>
+	</div>
+</div>

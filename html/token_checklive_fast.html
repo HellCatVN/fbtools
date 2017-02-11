@@ -1,0 +1,65 @@
+<div class="row">
+	<div class="col-md-3">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+				<h5>Check Token Live Max Speed</h5>
+			</div>
+			<div class="ibox-content">
+				<ul class="list-group">
+					<li class="list-group-item">
+						* Đã Nhập: <strong id="check_AccessToken_fast_danhap">0</strong>
+					</li>
+					<li class="list-group-item">
+						* Total Live: <strong><font color="green" id="check_AccessToken_fast_live">0</font></strong>
+					</li>
+					<li class="list-group-item">
+						* Total DIE: <strong><font color="red" id="check_AccessToken_fast_die">0</font></strong>
+					</li>
+				</ul>
+				<button class="btn btn-success btn-block" type="submit" id="check_AccessToken_fast_start">
+					Tiến hành Check <i class="fa fa-exchange"></i>
+				</button>
+				<br>
+				<ul class="list-group">
+					<li class="list-group-item">
+						* Access Token VN: <strong><font color="green" id="check_AccessToken_fast_LIVE_VN">0</font></strong>
+					</li>
+					<li class="list-group-item">
+						* Nước Ngoài: <strong><font color="green" id="check_AccessToken_fast_LIVE_Other">0</font></strong>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+				<h5>Nhập List Access Token (Bao nhiêu cũng check được, tốc độ max)</h5>
+				<div class="ibox-tools">
+					<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				</div>
+			</div>
+			<div class="ibox-content">
+				<textarea id="check_AccessToken_fast_input" rows="14" class="form-control" placeholder="Điền Access Token ..."></textarea>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_check_AccessToken_fast_result" style="display:none;">
+	<div class="ibox-title">
+		<h5>List Acces Token đã Check</h5>
+	</div>
+	<div class="ibox-content">
+		* <font color="green"><b>Access Token LIVE:</b></font>
+		<textarea class="form-control" id="input_check_AccessToken_fast_result" rows="8"></textarea>
+		<div class="hr-line-dashed"></div>
+		* <font color="red"><b>Access Token DIE:</b></font>
+		<textarea class="form-control" id="input_check_AccessToken_fast_result_die" rows="8"></textarea>
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<button class="btn btn-warning" id="html_check_AccessToken_fast_download">
+					Download As Zip <i class="fa fa-download"></i>
+			</button>
+		</div>
+	</div>
+</div>

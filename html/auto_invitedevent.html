@@ -1,0 +1,49 @@
+
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>Mời bạn bè tham gia sự kiện trên Facebook</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<textarea class="form-control" id="input_auto_invitedevent_token" placeholder="Nhập Access Token có quyền mời tham gia sự kiện (HTC, Page Manager for iOS, ...), mỗi Access Token cách nhau bởi dấu xuống dòng ..." rows="6"></textarea><br>
+
+		<b>* Số bạn bè muốn mời của 1 Access Token (LIMIT Friends):</b><br>
+		<input class="form-control" id="input_auto_invitedevent_fql_limit" value="5000" /><br>
+
+		<b>* ID Sự kiện:</b><br>
+		<input class="form-control" id="input_auto_invitedevent_id" placeholder="Điền ID Sự kiện vào đây ..." /><br>
+
+		<b>* Khoảng cách giữa 2 lần gửi (miliseconds):</b><br>
+		<input class="form-control" id="input_auto_invitedevent_delay" value="10" /><br>
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-success disabled" id="submit_auto_invitedevent_stop" disabled="">
+				DỪNG LẠI
+			</a>
+			<a class="btn btn-danger" id="submit_auto_invitedevent_start">
+				Bắt đầu
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_auto_invitedevent_result" style="display:none;">
+	<div class="ibox-title">
+		<h5>Kết Quả</h5>
+	</div>
+	<div class="ibox-content">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th width="5%">STT</th>
+					<th>Tên</th>
+					<th width="8%">Bạn bè</th>
+					<th width="8%">Thành công</th>
+					<th width="8%">Thất bại</th>
+					<th width="40%">Trạng thái</th>
+				</tr>
+			</thead>
+			<tbody id="html_auto_invitedevent_body"></tbody>
+		</table>
+	</div>
+</div>

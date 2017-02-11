@@ -1,0 +1,57 @@
+
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>Xóa bạn bè hàng loạt trên Facebook</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<input class="form-control" id="input_friend_delete_token" placeholder="Dán Access Token vào đây ..." /><br>
+
+		<b>* Lọc danh sách:</b><br>
+		<select class="form-control" id="input_friend_delete_sex">
+			<option value="all">Tất cả bạn bè</option>
+			<option value="boy">Chỉ lấy giới tính NAM</option>
+			<option value="girl">Chỉ lấy giới tính NỮ</option>
+			<option value="die">Lọc nick đã chết (FAQ, Block...)</option>
+		</select><br>
+	<em><b><h3>Notes:</h3></br>
+	<font color="red">+ Nếu muốn chọn tất cả uid để unfriend vui lòng click vào giữa ô vuông bên phải <i>"STT"</i></br>
+	+ Nếu muốn chọn từng uid để unfriend vui lòng click vào giữa ô vuông ở dòng bạn bè muốn unfriend trong cột thứ 2 (Tức là bên phải ô <i>"STT"</i>)</em><b></font>
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-danger" id="submit_friend_delete_load">
+				Lấy danh sách bạn bè
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_friend_delete_result" style="display:none">
+	<div class="ibox-title">
+		<h5>Danh sách bạn bè</h5>
+	</div>
+	<div class="ibox-content">
+		<div id="dataTables">
+			<table class="table table-bordered table-hover editable">
+				<thead>
+					<tr align="center" style="font-weight: bold;">
+						<td>STT</td>
+						<td><input type="checkbox" id="checkall_friend_delete" class="css-checkbox" /><label for="checkall_friend_delete" class="css-label"></label></td>
+						<td>Avatar</td>
+						<td>UID</td>
+						<td>Họ Và Tên</td>
+						<td>Friend</td>
+						<td>Sub</td>
+						<td>Trạng Thái</td>
+					</tr>
+				</thead>
+				<tbody id="html_friend_delete_table"></tbody>
+			</table>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-danger" id="submit_friend_delete_select">
+				<i class="fa fa-trash"></i> Xóa bạn bè đã chọn
+			</a>
+		</div>
+	</div>
+</div>

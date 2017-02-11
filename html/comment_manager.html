@@ -1,0 +1,65 @@
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>Facebook Comment Manager</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<input class="form-control" id="input_cmt_manager_token" placeholder="Dán Access Token vào đây ..." /><br>
+
+		<div class="hr-line-dashed"></div>
+		<div class="row">
+			<div class="col-md-6">
+				<b>* ID hoặc URL bài viết:</b>
+				<input type="text" class="form-control" id="input_cmt_manager_postid" placeholder="Nhập ID bài viết hoặc URL bài viết vào đây ..." />
+			</div>
+			<div class="col-md-6">
+				* Lấy kết quả theo: <b><u id="html_cmt_manager_filter">Nội dung bình luận</u></b>
+				<div class="input-group">
+					<input type="text" class="form-control" id="input_cmt_manager_filter" b-type="content" placeholder="Điền kết quả cần tìm kiếm ..." />
+					<div class="input-group-btn">
+						<button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button" aria-expanded="false">Bộ lọc <span class="caret"></span></button>
+						<ul class="dropdown-menu pull-right">
+							<li id="click_cmt_manager_mail_phone"><a>Mail - Phone</a></li>
+							<li id="click_cmt_manager_content" class="active"><a>Nội dung bình luận</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><br>
+		<div class="hr-line-dashed"></div>
+
+		<div class="text-right">
+			<a class="btn btn-success" id="submit_cmt_manager">
+				Lấy Dữ Liệu
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_cmt_manager_result" style="display:none;">
+	<div class="ibox-title">
+		<h5>Thông tin đã lấy được từ danh sách bình luận</h5>
+	</div>
+	<div class="ibox-content" id="dataTables">
+		<table class="table table-bordered table-hover editable">
+			<thead>
+				<tr>
+					<th width="5%">STT</th>
+					<th width="15%">Thành viên</th>
+					<th>Bình luận</th>
+					<th width="9%">Lượt thích</th>
+					<th width="11%">Thời gian đăng</th>
+				</tr>
+			</thead>
+			<tbody id="html_cmt_manager_table"></tbody>
+			<tbody id="html_cmt_manager_table_loading" style="display:none;">
+				<tr>
+					<td align="center"><img src="http://i.imgur.com/63EDGlY.gif" /></td>
+					<td align="center"><img src="http://i.imgur.com/63EDGlY.gif" /></td>
+					<td align="center"><img src="http://i.imgur.com/63EDGlY.gif" /></td>
+					<td align="center"><img src="http://i.imgur.com/63EDGlY.gif" /></td>
+					<td align="center"><img src="http://i.imgur.com/63EDGlY.gif" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

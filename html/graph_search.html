@@ -1,0 +1,52 @@
+<div class="page_tools ibox float-e-margins">
+	<div class="ibox-title">
+		<h5>Facebook Graph API Search</h5>
+	</div>
+	<div class="ibox-content">
+		<b>* Access Token:</b><br>
+		<input class="form-control" id="input_graph_search_token" placeholder="Dán Access Token vào đây ..." /><br>
+
+		<b>* Từ khóa:</b><br>
+		<input class="form-control" id="input_graph_search_key" placeholder="Từ khóa tìm kiếm ..." /><br>
+
+		<b>* Giới hạn tối đa:</b><br>
+		<input type="number" class="form-control" id="input_graph_search_limit" value="5000" /><br>
+
+		<b>* Loại:</b><br>
+		<select class="form-control" id="input_graph_search_type">
+			<option value="user">Mọi Người</option>
+			<option value="page">Trang</option>
+			<option value="group">Nhóm</option>
+		</select><br>
+
+		<div class="hr-line-dashed"></div>
+		<div class="text-right">
+			<a class="btn btn-success" id="submit_graph_search_start">
+				Quét dữ liệu
+				<i class="fa fa-search"></i>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="page_tools ibox float-e-margins" id="html_graph_search_hide" style="display:none;">
+	<div class="ibox-title">
+		<h5>Kết quả hàng đầu</h5>
+	</div>
+	<div class="ibox-content">
+		<textarea class="form-control" id="input_graph_search_result" rows="10"></textarea>
+	</div>
+	<div class="ibox-content" id="dataTables">
+		<table class="table table-bordered table-hover editable">
+			<thead>
+				<tr>
+					<th width="5%">STT</th>
+					<th>Avatar</th>
+					<th>ID</th>
+					<th>Name</th>
+					<th id="html_graph_search_type"></th>
+				</tr>
+			</thead>
+			<tbody id="html_graph_search_table"></tbody>
+		</table>
+	</div>
+</div>
